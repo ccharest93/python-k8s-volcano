@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "test",
+            "type": "python",
+            "request": "launch",
+            "program": "test/mylauncherscript.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "args": [
+                // "--config-file",
+                // "dinov2/configs/train/vitl16_short.yaml",
+                // "--no-resume",
+                // "False",
+                // "--eval-only",
+                // "False",
+                // "--output-dir",
+                // "<PATH/TO/OUTPUT/DIR>",
+                // "train.dataset_path=ImageNet:split=TRAIN:root=<PATH/TO/DATASET>:extra=<PATH/TO/DATASET>",
+            ],
+            "justMyCode": false
+        },
+    ]
+}
