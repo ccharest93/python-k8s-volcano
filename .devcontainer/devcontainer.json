@@ -1,6 +1,4 @@
 {
-	"name": "Alpine",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/vscode/devcontainers/python:3.10",
 	"postCreateCommand": "sh ./.devcontainer/setup.sh",
 	"customizations": {

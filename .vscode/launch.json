@@ -5,6 +5,36 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "app-launcher",
+            "type": "python",
+            "request": "launch",
+            "program": "test/app-launcher.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "args": [
+                "--name",
+                "maatra",
+            ],
+            "justMyCode": false
+        },
+        {
+            "name": "app-nolauncher",
+            "type": "python",
+            "request": "launch",
+            "program": "test/app.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "args": [
+                "--name",
+                "maatra",
+            ],
+            "justMyCode": false
+        },
+        {
             "name": "test",
             "type": "python",
             "request": "launch",

@@ -2,9 +2,10 @@ import k8svolc.k8svolc as k8svolc
 import logging
 import sys
 import os
-from test.mymodelcode import get_args_parser as get_entrypoint_args_parser
+from test.app import get_args_parser as get_entrypoint_args_parser
+from test.app import main as entrypoint
 
-logger = logging.getLogger("example-launcher")
+logger = logging.getLogger("app-launcher")
 
 
 def main():
@@ -19,8 +20,7 @@ def main():
     ### read more on kubernetes centralized logging solutions
 
     # EXTRA ARG CHECKS
-    assert os.path.exists(args.config_file), "Configuration file does not exist!"
-    k8svolc.submitjob()  # build container, push to repo, then submit job to volcano
+    entrypoint(args)  # build container, push to repo, then submit job to volcano
 
 
 if __name__ == "__main__":
