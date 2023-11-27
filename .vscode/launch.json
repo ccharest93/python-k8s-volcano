@@ -5,54 +5,24 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "app-launcher",
+            "name": "ddp_app-launcher",
             "type": "python",
             "request": "launch",
-            "program": "test/app-launcher.py",
+            "program": "test/ddp/ddp_app_launcher.py",
             "console": "integratedTerminal",
             "env": {
-                "PYTHONPATH": "${workspaceFolder}"
+                "PYTHONPATH": "${workspaceFolder}/k8svolc"
             },
             "args": [
-                "--name",
-                "maatra",
-            ],
-            "justMyCode": false
-        },
-        {
-            "name": "app-nolauncher",
-            "type": "python",
-            "request": "launch",
-            "program": "test/app.py",
-            "console": "integratedTerminal",
-            "env": {
-                "PYTHONPATH": "${workspaceFolder}"
-            },
-            "args": [
-                "--name",
-                "maatra",
-            ],
-            "justMyCode": false
-        },
-        {
-            "name": "test",
-            "type": "python",
-            "request": "launch",
-            "program": "test/mylauncherscript.py",
-            "console": "integratedTerminal",
-            "env": {
-                "PYTHONPATH": "${workspaceFolder}"
-            },
-            "args": [
-                // "--config-file",
-                // "dinov2/configs/train/vitl16_short.yaml",
-                // "--no-resume",
-                // "False",
-                // "--eval-only",
-                // "False",
-                // "--output-dir",
-                // "<PATH/TO/OUTPUT/DIR>",
-                // "train.dataset_path=ImageNet:split=TRAIN:root=<PATH/TO/DATASET>:extra=<PATH/TO/DATASET>",
+                "--image_repo",
+                "maatra/torchxtrial",
+                "--j",
+                "2x2",
+                "--queue",
+                "default",
+                "--",
+                "ddp_app.py",
+
             ],
             "justMyCode": false
         },
